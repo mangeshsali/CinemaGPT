@@ -89,8 +89,8 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img 
-        className="h-screen object-cover md:w-screen "
+        <img
+          className="h-screen object-cover md:w-screen "
           src={background_img}
           alt="background_image"
         />
@@ -133,7 +133,7 @@ const Login = () => {
         </button>
         <p className="py-4 cursor-pointer" onClick={toggleSignInform}>
           {isSignInForm
-            ? "New to Movieflix? Sign Up Now"
+            ? "New to CinemaGPT? Sign Up Now"
             : "Already registered? Sign In Now."}
         </p>
       </form>

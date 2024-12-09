@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import logo from "../img/logo.png";
+import logo from "../img/newLogo.png";
 import user_icon from "../img/user.jpg";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
@@ -72,7 +72,11 @@ const Header = () => {
 
   return (
     <div className=" absolute w-full contrast-200 z-10 h-20 md:h-24 flex  justify-between bg-gradient-to-b from-black select-none">
-      <img className=" w-30 md:w-56 -mt-5 -ml-[24px] md:-mt-8 mx-auto md:mx-0 -mr-[200px] "src={logo} alt="Movieflix-logo" />
+      <img
+        className=" w-30 md:w-56 -mt-5 -ml-[24px] md:-mt-8 mx-auto md:mx-0 -mr-[200px] "
+        src={logo}
+        alt="Movieflix-logo"
+      />
       {/* {user && (
         <div className="flex">
           <img className="w-14 h-14 mt-6" alt="user_icon" src={user_icon} />
@@ -101,8 +105,14 @@ const Header = () => {
               onClick={handleGptSearchClick}
               className="bg-purple-800 text-white md: text-normal m-3 md:pb-3 text-sm rounded-lg mt-4 mr-3 flex"
             >
-              {showGptSearch?<FaHome className="md:mt-3 mt-1 mb-1 md:mb-0 md:ml-2 ml-1.5" /> : <FaSearch className="md:mt-3 mt-1 mb-1 md:mb-0 md:ml-2 ml-1.5"/>}
-              <p className="md:mt-1.5 flex m-auto justify-center md:flex-none md:ml-2 ml-1 md:mr-2 mr-1.5">{showGptSearch? "Homepage" : "GPT Search"}</p>
+              {showGptSearch ? (
+                <FaHome className="md:mt-3 mt-1 mb-1 md:mb-0 md:ml-2 ml-1.5" />
+              ) : (
+                <FaSearch className="md:mt-3 mt-1 mb-1 md:mb-0 md:ml-2 ml-1.5" />
+              )}
+              <p className="md:mt-1.5 flex m-auto justify-center md:flex-none md:ml-2 ml-1 md:mr-2 mr-1.5">
+                {showGptSearch ? "Homepage" : "GPT Search"}
+              </p>
             </button>
             <img
               onClick={toggleDropdown}
